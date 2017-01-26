@@ -1,0 +1,112 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Untangle Captive Portal Helper for SSCPS</title>
+    <script type="text/javascript" src="alarm.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="misc.js"></script>
+    <script type="text/javascript" src="getinfo.js"></script>
+    <script type="text/javascript" src="loginout.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+        html, body {
+            width: 500px;
+            border: 5px;
+            padding: 5px;
+            margin: 5px;
+            height: 100%;
+            background-color: white;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-spacing: 1px;
+          border-collapse: collapse;
+          margin: 1px;
+          padding: 1px;
+          table-layout: fixed;
+          width: 235px;
+        }
+        #container {
+            width: inherit;
+            border: inherit;
+            padding: inherit;
+            margin: inherit;
+            height: inherit%;
+            background-color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <h1><center>Untangle Captive Portal Helper for SSCPS</center></h1>
+    <p id="showVersion"><b>VERSION:</b></p>
+    <div class="menuAutoLogin" >
+      <input type="checkbox" id="checkboxAutoLogin" name="autoLoginLabel"/>
+      <label for="autoLoginLabel"><nobr>Autologin?</nobr></label>
+    </div>
+    <button id="buttonCaptureLogout">Capture Logout</button>
+    <button id="buttonLogin">Login</button>
+    <button id="buttonLogout">Logout</button>
+    <hr>
+    <button id="buttonResetStorage">Reset Storage</button>
+    <button id="buttonTestWebsite">Test Website</button>
+    <button id="buttonGetAlarms">Get Alarms</button>
+    <hr>
+    <table>
+      <tr>
+        <td><p id="lastAlertSaved"><b>ALERT:</b> Just drew alert! :-)</p></td>
+        <td><p id="lastStatus"><b>Status:</b></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p id="passedStatus"><b>Passed?</b> Just drew passedStatus! :-)</p></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td><p id="lastLoginOutEvent"><b>Event:</b></p></td>
+        <td><p id="lastLoginOutDate"><b>Date:</b></p></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td><p id="showIPAddressParagraph"><b>ipAddress:</b></p></td>
+        <td><p id="showNetMaskParagraph"><b>netMask:</b></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p id="showIPGatewayParagraph"><b>ipGateway:</b></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p id="showUserNameParagraph"><b>userName:</b></p></td>
+      </tr>
+      <tr>
+        <td><p id="showHostnameParagraph"><b>hostName:</b></p></td>
+        <td><p id="showDomainNameParagraph"><b>domainName:</b></p></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td><p id="showHostOSParagraph"><b>hostOS:</b></p></td>
+        <td><p id="showURLPrefixParagraph"><b>urlPrefix:</b></p></td>
+      </tr>
+<!-- Commented out because probably won't need this for trouble-shooting
+      <tr>
+        <td colspan="2"><p id="showNumMinWaitParagraph"><b>numMinWait:</b></p></td>
+      </tr>
+-->
+      <tr>
+        <td colspan="2"><p id="showTestWebsiteParagraph"><b>Test Website:</b></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p id="showAlarmsInfoParagraph"><b>Alarms:</b></p></td>
+      </tr>
+    </table>
+    <hr>
+  </body>
+</html>

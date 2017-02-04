@@ -1,5 +1,5 @@
 function displayVersion() {
-  document.getElementById('showVersion').innerHTML = '<b>VERSION:</b> 0.0.1.1';
+  testDisplayElement('showVersion', '<b>VERSION:</b> 0.1.0.0');
 }
 
 function loadTestWebsite() {
@@ -88,18 +88,25 @@ function displayStoredInfo() {
   } else {
     document.getElementById("checkboxAutoLogin").checked = false;
   }
-  document.getElementById('passedStatus').innerHTML = '<b>Passed?</b>\n ' + localStorage.getItem("passedStatus");
-  document.getElementById('showNetMaskParagraph').innerHTML = '<b>netMask:</b>\n ' + localStorage.getItem("netMask");
-  document.getElementById('showURLPrefixParagraph').innerHTML = '<b>urlPrefix:</b>\n ' + localStorage.getItem("urlPrefix");
-  document.getElementById('showDomainNameParagraph').innerHTML = '<b>domainName:</b>\n ' + localStorage.getItem("domainName");
-  document.getElementById('showIPAddressParagraph').innerHTML = '<b>ipAddress:</b>\n ' + localStorage.getItem("ipAddress");
-  document.getElementById('showIPGatewayParagraph').innerHTML = '<b>ipGateway:</b>\n ' + localStorage.getItem("ipGateway");
-  document.getElementById('showTestWebsiteParagraph').innerHTML = '<b>Test Website:</b>\n ' + localStorage.getItem("testWebsite");
-  document.getElementById('showUserNameParagraph').innerHTML = '<b>userName:</b>\n ' + localStorage.getItem("userName");
-  document.getElementById('showHostnameParagraph').innerHTML = '<b>hostName:</b>\n ' + localStorage.getItem("hostName");
-  document.getElementById('showHostOSParagraph').innerHTML = '<b>hostOS:</b>\n ' + localStorage.getItem("hostOS");
-  //document.getElementById('showNumMinWaitParagraph').innerHTML = '<b>numMinWait:</b>\n ' + localStorage.getItem("numMinWait");
-  document.getElementById('lastLoginOutEvent').innerHTML = '<b>Event:</b>\n ' + localStorage.getItem("lastLoginOutEvent");
-  document.getElementById('lastLoginOutDate').innerHTML = '<b>Date:</b>\n ' + localStorage.getItem("lastLoginOutDate");
+  testDisplayElement(passedStatus, '<b>Passed?</b>\n ' + localStorage.getItem("passedStatus"));
+  testDisplayElement('showNetMaskParagraph', '<b>netMask:</b>\n ' + localStorage.getItem("netMask"));
+  testDisplayElement('showURLPrefixParagraph', '<b>urlPrefix:</b>\n ' + localStorage.getItem("urlPrefix"));
+  testDisplayElement('showDomainNameParagraph', '<b>domainName:</b>\n ' + localStorage.getItem("domainName"));
+  testDisplayElement('showIPAddressParagraph', '<b>ipAddress:</b>\n ' + localStorage.getItem("ipAddress"));
+  testDisplayElement('showIPGatewayParagraph', '<b>ipGateway:</b>\n ' + localStorage.getItem("ipGateway"));
+  testDisplayElement('showTestWebsiteParagraph', '<b>Test Website:</b>\n ' + localStorage.getItem("testWebsite"));
+  testDisplayElement('showUserNameParagraph', '<b>userName:</b>\n ' + localStorage.getItem("userName"));
+  testDisplayElement('showHostnameParagraph', '<b>hostName:</b>\n ' + localStorage.getItem("hostName"));
+  testDisplayElement('showHostOSParagraph', '<b>hostOS:</b>\n ' + localStorage.getItem("hostOS"));
+  testDisplayElement('showNumMinWaitParagraph', '<b>numMinWait:</b>\n ' + localStorage.getItem("numMinWait"));
+  testDisplayElement('lastLoginOutEvent', '<b>Event:</b>\n ' + localStorage.getItem("lastLoginOutEvent"));
+  testDisplayElement('lastLoginOutDate', '<b>Date:</b>\n ' + localStorage.getItem("lastLoginOutDate"));
   getDisplayAllAlarms();
+}
+
+// wrapper to test if element exists before displaying
+function testDisplayElement(strElementToFind, strTextToDisplay) {
+  if (document.getElementById(strElementToFind)) {
+    document.getElementById(strElementToFind).innerHTML = strTextToDisplay;
+  }
 }

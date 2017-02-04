@@ -2,7 +2,13 @@
   "manifest_version": 2,
   "name": "Untangle Captive Portal Helper for SSCPS",
   "description": "This extension will pass appropriate URL to Untangle's Captive Portal if it can't get to specific test URL.",
-  "version": "0.0.1.1",
+  "version": "0.1.0.0",
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
 
   "background": {
     "scripts": [
@@ -16,7 +22,7 @@
     "persistent": true
   },
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icon48.png",
     "default_popup": "popup.html",
     "default_title": "Get help connecting to Internet at SSCPS!"
   },

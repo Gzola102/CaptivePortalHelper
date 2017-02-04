@@ -19,8 +19,7 @@
             border: 5px;
             padding: 5px;
             margin: 5px;
-            height: 100%;
-            background-color: white;
+            background-color: #819FF7;
         }
         table, th, td {
           border: 1px solid black;
@@ -48,65 +47,66 @@
       <input type="checkbox" id="checkboxAutoLogin" name="autoLoginLabel"/>
       <label for="autoLoginLabel"><nobr>Autologin?</nobr></label>
     </div>
-    <button id="buttonCaptureLogout">Capture Logout</button>
     <button id="buttonLogin">Login</button>
     <button id="buttonLogout">Logout</button>
+    <button id="buttonCaptureLogout">Capture Logout</button>
     <hr>
     <button id="buttonResetStorage">Reset Storage</button>
     <button id="buttonTestWebsite">Test Website</button>
     <button id="buttonGetAlarms">Get Alarms</button>
     <hr>
-    <table>
-      <tr>
-        <td><p id="lastAlertSaved"><b>ALERT:</b> Just drew alert! :-)</p></td>
-        <td><p id="lastStatus"><b>Status:</b></p></td>
-      </tr>
-      <tr>
-        <td colspan="2"><p id="passedStatus"><b>Passed?</b> Just drew passedStatus! :-)</p></td>
-      </tr>
-    </table>
+    <!-- always shown generic information -->
     <hr>
     <table>
       <tr>
         <td><p id="lastLoginOutEvent"><b>Event:</b></p></td>
         <td><p id="lastLoginOutDate"><b>Date:</b></p></td>
       </tr>
-    </table>
-    <hr>
-    <table>
       <tr>
-        <td><p id="showIPAddressParagraph"><b>ipAddress:</b></p></td>
-        <td><p id="showNetMaskParagraph"><b>netMask:</b></p></td>
-      </tr>
-      <tr>
-        <td colspan="2"><p id="showIPGatewayParagraph"><b>ipGateway:</b></p></td>
-      </tr>
-      <tr>
-        <td colspan="2"><p id="showUserNameParagraph"><b>userName:</b></p></td>
-      </tr>
-      <tr>
-        <td><p id="showHostnameParagraph"><b>hostName:</b></p></td>
-        <td><p id="showDomainNameParagraph"><b>domainName:</b></p></td>
-      </tr>
-    </table>
-    <hr>
-    <table>
-      <tr>
-        <td><p id="showHostOSParagraph"><b>hostOS:</b></p></td>
-        <td><p id="showURLPrefixParagraph"><b>urlPrefix:</b></p></td>
-      </tr>
-<!-- Commented out because probably won't need this for trouble-shooting
-      <tr>
-        <td colspan="2"><p id="showNumMinWaitParagraph"><b>numMinWait:</b></p></td>
-      </tr>
--->
-      <tr>
-        <td colspan="2"><p id="showTestWebsiteParagraph"><b>Test Website:</b></p></td>
+        <td colspan="2"><p id="passedStatus"><b>Passed?</b> Just drew passedStatus! :-)</p></td>
       </tr>
       <tr>
         <td colspan="2"><p id="showAlarmsInfoParagraph"><b>Alarms:</b></p></td>
       </tr>
     </table>
+
+    <!-- always shown user/machine information -->
     <hr>
+    <table>
+      <tr>
+        <td><p id="showIPAddressParagraph"><b>ipAddress:</b></p></td>
+        <td><p id="showIPGatewayParagraph"><b>ipGateway:</b></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p id="showUserNameParagraph"><b>userName:</b></p></td>
+      </tr>
+    </table>
+
+
+    <!-- additional trouble-shooting information -->
+<!--
+    <hr>
+    <table>
+      <tr>
+      <td><p id="lastAlertSaved"><b>ALERT:</b> Just drew alert! :-)</p></td>
+      <td><p id="lastStatus"><b>Status:</b></p></td>
+      </tr>
+      <tr>
+        <td><p id="showNumMinWaitParagraph"><b>numMinWait:</b></p></td>
+        <td><p id="showNetMaskParagraph"><b>netMask:</b></p></td>
+      </tr>
+      <tr>
+        <td><p id="showURLPrefixParagraph"><b>urlPrefix:</b></p></td>
+        <td><p id="showTestWebsiteParagraph"><b>Test Website:</b></p></td>
+      </tr>
+      <tr>
+        <td><p id="showHostnameParagraph"><b>hostName:</b></p></td>
+        <td><p id="showDomainNameParagraph"><b>domainName:</b></p></td>
+        <td colspan="2"><p id="showHostOSParagraph"><b>hostOS:</b></p></td>
+      </tr>
+    </table>
+-->
+    <hr>
+
   </body>
 </html>

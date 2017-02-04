@@ -76,6 +76,6 @@ function getDisplayAllAlarms() {
       scheduledTimeReadable = scheduledTimeObject.toString();
       stringOfAlarms = stringOfAlarms + String.fromCharCode(13) + alarms[i].name + ' || ' + scheduledTimeReadable + ' || ' + alarms[i].periodInMinutes;
     }
-    document.getElementById('showAlarmsInfoParagraph').innerHTML = stringOfAlarms;
+    testDisplayElement('showAlarmsInfoParagraph', stringOfAlarms);
   });
 }

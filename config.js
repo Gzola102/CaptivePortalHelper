@@ -9,7 +9,7 @@
 // These are values that are changed for the environment the extension is used.
 
 function setStoredValuesStatic() {
-  localStorage.setItem("numMinWait", "2"); // value to wait for alarm to relogin to Untangle
+  localStorage.setItem("numMinWait", "5"); // value to wait for alarm to relogin to Untangle, alarm min is 1 min
   localStorage.setItem("passedStatus", "Not checked yet! :-)");
   localStorage.setItem("lastAlertSaved", "None at this point! :-)");
   localStorage.setItem("autoLogin", true); // controls whether alarm created/removed

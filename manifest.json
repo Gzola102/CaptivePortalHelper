@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Untangle Captive Portal Helper for SSCPS",
   "description": "This extension will pass appropriate URL to Untangle's Captive Portal if it can't get to specific test URL.",
-  "version": "0.1.0.2",
+  "version": "0.1.0.3",
 
   "icons": {
     "16": "icon16.png",

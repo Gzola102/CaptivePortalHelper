@@ -1,5 +1,5 @@
 function displayVersion() {
-  testDisplayElement('showVersion', '<b>VERSION:</b> 0.1.0.1');
+  testDisplayElement('showVersion', '<b>VERSION:</b> 0.1.0.3');
 }
 
 function loadTestWebsite() {
